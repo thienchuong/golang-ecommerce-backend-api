@@ -3,7 +3,7 @@ package service
 import "github.com/thienchuong/golang-ecommerce-backend-api/internal/repo"
 
 type UserService struct {
-	userRepo *repo.UserRepo()
+	userRepo *repo.UserRepo
 }
 
 func NewUserService() *UserService {
@@ -14,5 +14,5 @@ func NewUserService() *UserService {
 
 // us user Service
 func (us *UserService) GetInFoUserService() string {
-	return us.UserRepo.GetInFoUser()
+	return us.userRepo.GetInFoUser()
 }

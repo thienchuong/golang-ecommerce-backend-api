@@ -1,10 +1,9 @@
 package controller
 
 import (
-	"net/http"
-
 	"github.com/gin-gonic/gin"
 	"github.com/thienchuong/golang-ecommerce-backend-api/internal/service"
+	"github.com/thienchuong/golang-ecommerce-backend-api/response"
 )
 
 type UserController struct {
@@ -22,8 +21,8 @@ func NewUserController() *UserController {
 
 // controller -> service -> repo -> models -> db
 func (uc *UserController) GetUserByID(c *gin.Context) {
-	c.JSON(http.StatusOK, gin.H){
-		"message": uc.userService.GetInFoUserService(),
-		"user": []string{"toni", "budi", "caca"},
+	if err != nil {
+		return response.ErrorResponse(c, 20003, "no need")
 	}
+	return response.SuccessResponse(c, 20001, []string{"thienchuong-1", "thienchuong-2"})
 }
