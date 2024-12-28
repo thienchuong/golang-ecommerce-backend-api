@@ -13,6 +13,6 @@ func NewUserService() *UserService {
 }
 
 // us user Service
-func (us *UserService) GetInFoUserService() string {
-	return us.userRepo.GetInFoUser()
-}
+// func (us *UserService) GetInFoUserService() string {
+// 	return us.userRepo.GetInFoUser()
+// }
